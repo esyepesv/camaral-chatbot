@@ -17,8 +17,8 @@ Next.js 14 App Router con Vercel AI SDK **v6** para streaming. Tres capas de Pro
 ## Estado por fase
 - [x] Fase 0: Setup y planeación
 - [x] Fase 1: Setup del proyecto + pgvector
-- [ ] **Fase 2: Providers (LLM, Embeddings, VectorStore)** ← AQUÍ ESTAMOS
-- [ ] Fase 3: Pipeline de ingesta de knowledge base
+- [x] Fase 2: Providers (LLM, Embeddings, VectorStore)
+- [ ] **Fase 3: Pipeline de ingesta de knowledge base** ← AQUÍ ESTAMOS
 - [ ] Fase 4: API de chat con RAG + streaming
 - [ ] Fase 5: UI del chat
 - [ ] Fase 6: Admin panel + lead capture
