@@ -1,0 +1,102 @@
+[
+  {
+    "question": "¿Qué es Camaral?",
+    "expectedAnswer": "plataforma de AI Avatars para ventas y soporte empresarial",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Cómo funcionan los avatares de Camaral?",
+    "expectedAnswer": "avatares virtuales impulsados por IA que pueden mantener conversaciones",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Para qué casos de uso sirve Camaral en ventas?",
+    "expectedAnswer": "prospección, calificación de leads, demostraciones de producto, seguimiento",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Cuáles son los planes y precios de Camaral?",
+    "expectedAnswer": "planes con diferentes niveles de características y precios",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Camaral se puede integrar con CRM?",
+    "expectedAnswer": "sí, integraciones con sistemas CRM y herramientas empresariales",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Cómo se puede personalizar el avatar con la marca de mi empresa?",
+    "expectedAnswer": "personalización de apariencia, voz, nombre y comportamiento del avatar",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿En qué idiomas funciona Camaral?",
+    "expectedAnswer": "múltiples idiomas o español e inglés al menos",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Qué tan rápido se puede implementar Camaral?",
+    "expectedAnswer": "tiempo de implementación o onboarding",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Camaral tiene soporte técnico?",
+    "expectedAnswer": "sí, soporte técnico disponible",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Cómo puedo hacer una prueba de Camaral?",
+    "expectedAnswer": "demo, trial, contactar equipo comercial",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Funciona Camaral para soporte al cliente?",
+    "expectedAnswer": "sí, casos de uso de soporte y atención al cliente",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre el plan básico y el avanzado?",
+    "expectedAnswer": "diferencias de características entre planes",
+    "category": "in-scope"
+  },
+  {
+    "question": "¿Cuál es la capital de Francia?",
+    "expectedAnswer": "respuesta indicando que solo puede responder sobre Camaral",
+    "category": "out-of-scope"
+  },
+  {
+    "question": "¿Puedes escribirme un poema?",
+    "expectedAnswer": "respuesta indicando que solo puede responder sobre Camaral",
+    "category": "out-of-scope"
+  },
+  {
+    "question": "¿Cuánto cuesta un iPhone?",
+    "expectedAnswer": "respuesta indicando que solo puede responder sobre Camaral",
+    "category": "out-of-scope"
+  },
+  {
+    "question": "¿Qué tiempo hace hoy?",
+    "expectedAnswer": "respuesta indicando que solo puede responder sobre Camaral",
+    "category": "out-of-scope"
+  },
+  {
+    "question": "¿Quién ganó el Mundial 2022?",
+    "expectedAnswer": "respuesta indicando que solo puede responder sobre Camaral",
+    "category": "out-of-scope"
+  },
+  {
+    "question": "¿Puede un avatar de Camaral reemplazar completamente a un vendedor humano?",
+    "expectedAnswer": "respuesta equilibrada sobre capacidades y limitaciones",
+    "category": "edge-case"
+  },
+  {
+    "question": "¿Qué pasa si el avatar no sabe responder algo?",
+    "expectedAnswer": "manejo de preguntas fuera de base de conocimiento, escalado a humanos",
+    "category": "edge-case"
+  },
+  {
+    "question": "¿Camaral compite con Salesforce?",
+    "expectedAnswer": "información sobre posicionamiento, posiblemente complementario",
+    "category": "edge-case"
+  }
+]
