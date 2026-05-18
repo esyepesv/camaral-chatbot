@@ -13,7 +13,7 @@ export class AnthropicProvider implements LLMProvider {
         content: m.content,
       })),
       temperature: options?.temperature,
-      maxTokens: options?.maxTokens,
+      maxOutputTokens: options?.maxTokens,
     });
     for await (const text of textStream) {
       yield { text };

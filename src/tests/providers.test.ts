@@ -38,7 +38,8 @@ describe('Providers Layer', () => {
     it('Google provider throws error on chat', async () => {
       process.env.LLM_PROVIDER = 'google';
       const provider = createLLMProvider();
-      const iterator = provider.chat([{ role: 'user', content: 'test' }]);
+      const iterable = provider.chat([{ role: 'user', content: 'test' }]);
+      const iterator = iterable[Symbol.asyncIterator]();
       await expect(iterator.next()).rejects.toThrow(LLMProviderError);
     });
   });
