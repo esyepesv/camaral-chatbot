@@ -1,5 +1,5 @@
 export interface DocumentChunk {
-  id?: number;
+  id?: string;
   content: string;
   metadata: {
     source: string;
