@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <main className="min-h-screen flex items-center justify-center">
-      <p className="text-muted-foreground">Camaral Chatbot — Initializing...</p>
-    </main>
-  );
+import { ChatInterface } from '@/components/chat/ChatInterface';
+
+export default function HomePage() {
+  return <ChatInterface />;
 }
