@@ -4,7 +4,7 @@ RAG chatbot for Camaral — an AI Avatar platform for enterprise sales and suppo
 
 ## Live Demo
 
-[Deploy URL — to be added after `vercel deploy`]
+https://reto-makers-three.vercel.app
 
 ## Stack
 
