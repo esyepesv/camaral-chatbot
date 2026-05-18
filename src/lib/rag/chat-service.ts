@@ -1,22 +1,18 @@
-import { streamText } from 'ai';
+import { streamText, type ModelMessage } from 'ai';
 import { openai } from '@ai-sdk/openai';
 import { retrieve } from './retriever';
 import { buildSystemPrompt } from './prompt-builder';
-
-export interface ChatMessage {
-  role: 'user' | 'assistant';
-  content: string;
-}
 
 export interface RAGContext {
   result: ReturnType<typeof streamText>;
   sources: string[];
 }
 
-export async function ragChat(messages: ChatMessage[]): Promise<RAGContext> {
-  const lastUserMessage = messages.filter(m => m.role === 'user').at(-1)?.content ?? '';
-
-  const results = await retrieve(lastUserMessage);
+export async function ragChat(
+  messages: ModelMessage[],
+  userQuery: string,
+): Promise<RAGContext> {
+  const results = await retrieve(userQuery);
   const systemPrompt = buildSystemPrompt(results);
   const sources = [...new Set(results.map(r => r.chunk.metadata.source))];
 
