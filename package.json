@@ -8,8 +8,8 @@
     "start": "next start",
     "test": "vitest run",
     "test:watch": "vitest",
-    "ingest": "tsx scripts/ingest.ts",
-    "eval": "tsx scripts/eval.ts"
+    "ingest": "node --env-file=.env.local --import tsx scripts/ingest.ts",
+    "eval": "node --env-file=.env.local --import tsx scripts/eval.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.78",

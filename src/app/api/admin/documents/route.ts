@@ -12,13 +12,13 @@ export async function GET(req: NextRequest) {
     .order('source');
 
   if (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
+    console.error('[admin/documents] GET error:', error.message);
+    return new Response(JSON.stringify({ error: 'Database error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
   }
 
-  // Group by source
   const grouped = new Map<string, { source: string; title: string; chunkCount: number; createdAt: string }>();
   for (const row of data ?? []) {
     const existing = grouped.get(row.source);
@@ -40,8 +40,17 @@ export async function GET(req: NextRequest) {
 export async function DELETE(req: NextRequest) {
   if (!verifyAdminAuth(req)) return unauthorizedResponse();
 
-  const { source } = await req.json();
-  if (!source) {
+  let body: { source?: unknown };
+  try {
+    body = await req.json();
+  } catch {
+    return new Response(JSON.stringify({ error: 'Invalid JSON' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  if (typeof body.source !== 'string' || !body.source.trim()) {
     return new Response(JSON.stringify({ error: 'source is required' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' },
@@ -49,10 +58,11 @@ export async function DELETE(req: NextRequest) {
   }
 
   const client = createServiceClient();
-  const { error } = await client.from('document_chunks').delete().eq('source', source);
+  const { error } = await client.from('document_chunks').delete().eq('source', body.source);
 
   if (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
+    console.error('[admin/documents] DELETE error:', error.message);
+    return new Response(JSON.stringify({ error: 'Database error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
